@@ -1,0 +1,10 @@
+{% extends 'home/base.html' %}
+{% block content %}
+  <h1>Music</h1>
+  {% for album in albums %}
+    <h2>{{ album.title }}</h2>
+    <h3>{{ album.label }}</h3>
+    <h3>{{ album.year }}</h3>
+    <img src="{{ album.image.url }}" alt="" width=400px>
+  {% endfor %}
+{% endblock content %}

@@ -9,6 +9,7 @@ verify_ssl = true
 django = "*"
 psycopg2 = "*"
 python-dotenv = "*"
+pillow = "*"
 
 [requires]
 python_version = "3.8"
