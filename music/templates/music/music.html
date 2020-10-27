@@ -2,7 +2,7 @@
 {% block content %}
   <h1>Music</h1>
   {% for album in albums %}
-    <h2>{{ album.title }}</h2>
+    <h2><a href={% url 'Album' album_title=album.title %}>{{ album.title }}</a></h2>
     <h3>{{ album.label }}</h3>
     <h3>{{ album.year }}</h3>
     <img src="{{ album.image.url }}" alt="" width=400px>

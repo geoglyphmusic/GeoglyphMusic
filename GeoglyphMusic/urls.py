@@ -23,6 +23,7 @@ urlpatterns = [
     path('', include('home.urls')),
     path('music/', include('music.urls')),
     path('blog/', include('blog.urls')),
+    path('psychilldb/', include('psychilldb.urls')),
 ]
 
 if settings.DEBUG:
