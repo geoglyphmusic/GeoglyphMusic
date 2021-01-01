@@ -20,10 +20,12 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('ckeditor', include('ckeditor_uploader.urls')),
     path('', include('home.urls')),
     path('music/', include('music.urls')),
     path('blog/', include('blog.urls')),
     path('psychilldb/', include('psychilldb.urls')),
+    path('psychillworld/', include('psychillworld.urls')),
 ]
 
 if settings.DEBUG:

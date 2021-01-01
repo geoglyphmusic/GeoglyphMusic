@@ -10,6 +10,8 @@ django = "*"
 psycopg2 = "*"
 python-dotenv = "*"
 pillow = "*"
+django-active-link = "*"
+django-ckeditor = "*"
 
 [requires]
 python_version = "3.8"

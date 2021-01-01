@@ -1,0 +1,42 @@
+* {
+  background-color: black;
+  color: white;
+}
+
+ul.navbar-nav>li.nav-item>a.nav-link
+{
+  font-family: 'Audiowide', cursive;
+  font-size: 25px;
+  color: #FFC078;
+}
+
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .nav-item:hover .nav-link {
+    color: #78D6FF;
+}
+
+h1, h2, h3 {
+  font-family: 'Audiowide', cursive;
+  color: #78D6FF;
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+  color: #bfbfbf;
+}
+
+.btn-geoglyph {
+  font-family: 'Audiowide', cursive;
+  background-color: #FFC078;
+  border-color: #FFC078;
+}
+
+.btn-geoglyph:hover, .btn-geoglyph:focus, .btn-geoglyph:active, .btn-geoglyph:active:focus, .btn-geoglyph.active {
+  background-color: #78D6FF;
+  border-color: #78D6FF;
+  box-shadow: none;
+}
+
+hr {
+  background-color: white;
+}

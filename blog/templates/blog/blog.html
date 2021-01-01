@@ -1,9 +1,7 @@
 {% extends 'home/base.html' %}
 {% block content %}
-  <h1>Blog</h1>
   {% for post in posts %}
     <h2 class="pt-4"><a href={% url 'Post' post_title=post.title %}>{{ post.title }}</a></h2>
-    <p>{{ post.pub_date }}</p>
-    <p>{{ post.content|safe }}</p>
+    <p>{{ post.date_published|date:"d M Y" }}</p>
   {% endfor %}
 {% endblock content %}

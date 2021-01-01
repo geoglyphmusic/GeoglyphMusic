@@ -1,12 +1,13 @@
 from django.shortcuts import render
-from .models import Album
+from .models import Album, CompilationTrack
 from django.shortcuts import get_object_or_404
 
 
 # Create your views here.
 def music(request):
 	context = {
-		'albums': Album.objects.all()
+		'albums': Album.objects.all(),
+		'compilation_tracks': CompilationTrack.objects.all(),
 	}
 	return render(request, 'music/music.html', context)
 
