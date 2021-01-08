@@ -1,11 +1,11 @@
 {% extends 'home/base.html' %}
 {% block content %}
-  <h1 class="pb-4">Albums</h1>
+  <h3 class="pb-4">Albums</h3>
   <div class="row">
     {% for album in albums %}
     <div class="col-sm-4">
       <div style="min-height: 180px;">
-        <h2><a href={% url 'Album' album_title=album.title %}>{{ album.title }}</a></h2>
+        <h3><a href={% url 'Album' album_title=album.title %}>{{ album.title }} >></a></h3>
         <h3>{{ album.label }}</h3>
         <h3>{{ album.year }}</h3>
       </div>
@@ -13,12 +13,12 @@
     </div>
     {% endfor %}
   </div>
-  <h1 class="pb-4">Compilation Tracks</h1>
+  <h3 class="pb-4">Compilation Tracks</h3>
   <div class="row">
     {% for track in compilation_tracks %}
     <div class="col-sm-4">
       <div style="min-height: 180px;">
-        <h2>'{{ track.title }}'</h2>
+        <h3>'{{ track.title }}'</h3>
         <h3>{{ track.label }}</h3>
         <h3>{{ track.year }}</h3>
       </div>
