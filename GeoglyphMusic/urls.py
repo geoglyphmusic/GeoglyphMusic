@@ -26,6 +26,7 @@ urlpatterns = [
     path('blog/', include('blog.urls')),
     path('psychilldb/', include('psychilldb.urls')),
     path('psychillworld/', include('psychillworld.urls')),
+    path('links/', include('links.urls')),
 ]
 
 if settings.DEBUG:
