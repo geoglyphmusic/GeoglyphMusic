@@ -12,6 +12,9 @@ class Album(models.Model):
     def __str__(self):
         return self.title
 
+    class Meta:
+    	ordering = ['-year']
+
 class CompilationTrack(models.Model):
     title = models.CharField(max_length=100)
     year = models.IntegerField(default=2020)
@@ -21,3 +24,6 @@ class CompilationTrack(models.Model):
 
     def __str__(self):
         return self.title
+
+    class Meta:
+    	ordering = ['-year']
