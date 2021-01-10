@@ -3,6 +3,6 @@
   {% for post in posts %}
     <h2 class="pt-4"><a href={% url 'Post' post_title=post.title %}>{{ post.title }}</a></h2>
     <p>{{ post.date_published|date:"d M Y" }}</p>
-    {{ blog.content|safe }}
+    {{ post.content|safe }}
   {% endfor %}
 {% endblock content %}
