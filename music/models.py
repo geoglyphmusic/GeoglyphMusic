@@ -7,6 +7,7 @@ class Album(models.Model):
     label = models.CharField(max_length=100)
     image = models.ImageField(upload_to='album_covers')
     bandcamp = models.CharField(max_length=500)
+    description = models.TextField()
 
     def __str__(self):
         return self.title

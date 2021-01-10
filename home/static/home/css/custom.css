@@ -3,16 +3,27 @@ body, * {
   color: white;
 }
 
+
 ul.navbar-nav>li.nav-item>a.nav-link
 {
   font-family: 'Audiowide', cursive;
   font-size: 22px;
   color: #FFC078;
+  transition: color 0.25s;
 }
+
 
 .navbar-dark .navbar-nav .nav-link.active,
 .navbar-dark .nav-item:hover .nav-link {
     color: #78D6FF;
+}
+
+i {
+  transition: color 0.25s;
+}
+
+i:hover {
+  color: #FFC078;
 }
 
 h1, h2, h3 {

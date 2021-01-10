@@ -3,7 +3,14 @@
   <h2>{{ album.title }}</h2>
   <h3>{{ album.label }}</h3>
   <h3>{{ album.year }}</h3>
-  {{ album.bandcamp|safe }}
+  <div class="row">
+    <div class="col-sm-4">
+      {{ album.bandcamp|safe }}
+    </div>
+    <div class="col-sm-8">
+      <p class="text-justify">{{ album.description|safe }}</p>
+    </div>
+  </div>
   </br>
-  <a class="btn btn-geoglyph mt-4" href="{% url 'Music' %}">Back to Music</a>
+  <h3><a href="{% url 'Music' %}"><< Back to Music</a></h3>
 {% endblock content %}
