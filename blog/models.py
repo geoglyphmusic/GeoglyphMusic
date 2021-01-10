@@ -10,7 +10,6 @@ from ckeditor_uploader.fields import RichTextUploadingField
 class Post(models.Model):
     title = models.CharField(max_length=100)
     slug = AutoSlugField(populate_from='title')
-    abstract = models.TextField()
     content = RichTextUploadingField(blank=True, null=True)
     date_published = models.DateTimeField('date published', null=True)
 
