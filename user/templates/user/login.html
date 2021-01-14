@@ -1,0 +1,9 @@
+{% extends 'home/base.html' %}
+{% block content %}
+<form class="" action="" method="POST">
+  {% csrf_token %}
+  <input type="text" name="username" placeholder="Username"><br>
+  <input class="mt-4" "type="password" name="password" placeholder="Password"><br>
+  <button type="submit" class="btn btn-geoglyph mt-4" method="POST">Login</button>
+</form>
+{% endblock content %}

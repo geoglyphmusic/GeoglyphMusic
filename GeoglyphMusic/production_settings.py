@@ -49,7 +49,8 @@ INSTALLED_APPS = [
     'music',
     'blog',
     'psychilldb',
-    'psychillworld'
+    'psychillworld',
+    'user',
 ]
 
 CKEDITOR_UPLOAD_PATH = 'uploads/'
