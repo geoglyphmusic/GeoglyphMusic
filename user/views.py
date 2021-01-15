@@ -43,7 +43,11 @@ def account(request):
 
 @login_required(login_url='login')
 def edit_profile(request):
-    form = CustomChangeForm()
+    form = CustomChangeForm(initial={
+        'first_name': request.user.first_name,
+        'last_name': request.user.last_name,
+        'username': request.user.username,
+        'email': request.user.email})
 
     def get_object(self):
         return self.request.user
