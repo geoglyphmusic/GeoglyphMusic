@@ -4,7 +4,7 @@ from django.contrib.auth.forms import UserCreationForm, UserChangeForm, Password
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 
-from .forms import CustomRegisterForm, CustomChangeForm
+from .forms import CustomRegisterForm, EmailChangeForm
 
 # Create your views here.
 def register(request):
@@ -43,22 +43,14 @@ def account(request):
 
 @login_required(login_url='login')
 def edit_profile(request):
-    form = CustomChangeForm(initial={
-        'first_name': request.user.first_name,
-        'last_name': request.user.last_name,
-        'username': request.user.username,
-        'email': request.user.email})
-
-    def get_object(self):
-        return self.request.user
-
     if request.method == 'POST':
-        form = CustomChangeForm(request.POST) #We have to declare the form again to stop error messages showing up before form is used
+        form = EmailChangeForm(request.POST, instance=request.user)
         if form.is_valid():
             form.save()
-            user = form.cleaned_data.get('username')
-            messages.success(request, 'Account changed for ' + user)
+            messages.success(request, 'Email address changed for ' + request.user.username)
             return redirect('account')
+    else:
+        form = EmailChangeForm()
     return render(request, 'user/edit_profile.html', {'form': form})
 
 @login_required(login_url='login')
@@ -74,6 +66,4 @@ def change_password(request):
             messages.error(request, 'Please correct the error below.')
     else:
         form = PasswordChangeForm(request.user)
-    return render(request, 'user/change_password.html', {
-        'form': form
-    })
+    return render(request, 'user/change_password.html', {'form': form})
