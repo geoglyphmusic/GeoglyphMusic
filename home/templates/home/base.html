@@ -22,7 +22,7 @@
     <!-- Page Icon -->
     <link rel="shortcut icon" type="image/png" href="{% static 'home/img/icon_main.ico' %}"/>
 
-    <title>Geoglyph</title>
+    <title>Geoglyph{% block title %}{% endblock %}</title>
   </head>
 
   <body>
@@ -81,7 +81,7 @@
         </div>
         {% endfor %}
         {% endif %}
-        
+
         {% block content %}
         {% endblock %}
       </div>

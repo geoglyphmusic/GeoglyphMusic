@@ -1,4 +1,7 @@
 {% extends 'home/base.html' %}
+{% block title %}
+- Blog
+{% endblock title %}
 {% block content %}
   {% for post in posts %}
     <h2 class="pt-4"><a href={% url 'Post' post_title=post.title %}>{{ post.title }}</a></h2>
