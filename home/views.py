@@ -1,8 +1,9 @@
 from django.shortcuts import render
+from .models import Homepage
 
 # Create your views here.
 def home(request):
-	return render(request, 'home/home.html')
-
-def about(request):
-	return render(request, 'home/about.html')
+    context = {
+        'homepage': Homepage.objects.filter(active=True).first(),
+    }
+    return render(request, 'home/home.html', context)
